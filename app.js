@@ -4,7 +4,7 @@ const app = Vue.createApp({
         return {
             
             members:[
-                "dima","tongi","justus","kayal"
+                "dima","tanguy","justus","kayal","dominik"
             ],
 
 
