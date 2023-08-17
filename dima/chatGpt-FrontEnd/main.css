@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+html, body{
+    height: 100%;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin: 0 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+.chat-container{
+    max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chat-messages{
+    flex: 1;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.message{
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-content{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #62f0a9;
+    
+}
+
+.received .message-content {
+    background-color: #62f0a9;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+}
+
+.sent .message-content {
+    background-color: #655fdd;
+    color: #fff;
+    text-align: right;
+}
+
+.received .message-content::before {
+    content: "";
+    font-weight: bold;
+    background-color: #f1f0f0;
+}
+
+.sent .message-content::before {
+    content: "User: ";
+    font-weight: bold;
+}
+
+
+.received{
+    background-color: #f1f0f0;
+}
+
+.sent{
+    color: #fff;
+    text-align: right;
+}
+
+.user-input {
+position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.input-container {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.user-input input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-right: 30px;
+    outline: none;
+}
+
+.user-input button {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.send-icon {
+    width: 10px;
+    height: 10px;
+    background-image: url("assets/Send.png");
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.icon-container {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.icon-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.bot-image {
+    max-width: 20px;
+    height: auto;
+    margin-right: 5px;
+}

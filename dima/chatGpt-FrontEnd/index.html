@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>ChatGPT binaere-bauten </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/binaere-bauten-logo.jpeg" alt="Company Logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="app" class="chat-container">
+        <div class="chat-messages">
+        <div v-for="message in messages" :key="message.id" :class="['message', message.type]">
+            <div class="message-content">
+                <img v-if="message.bot" src="assets/ki-icon.png" alt="Bot Image" class="bot-image">
+                <span v-if="message.content">{{ message.content }}</span>
+            </div>
+        </div>
+
+        </div>
+        <div class="user-input">
+            <input type="text" placeholder="Send a message..." v-model="userInput" @keyup.enter="sendMessage">
+            <div class="icon-container" @click="sendMessage">
+                <img src="assets/Send.png" alt="Send">
+            </div>
+        </div>
+    </div>
+    <script src="App.js"></script>
+
+
+</body>
+</html>

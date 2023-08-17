@@ -8,8 +8,11 @@ const app = Vue.createApp({
     methods: {
         sendMessage() {
             if (this.userInput.trim() !== "") {
-                this.messages.push({ content: this.userInput, type: "sent" });
-
+                
+                this.messages.push({
+                    content: this.userInput,
+                    type: "sent"
+                });
                 //Answer from Bot
                 this.messages.push({
                 id: this.messages.length,
