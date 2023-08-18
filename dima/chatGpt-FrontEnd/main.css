@@ -44,9 +44,20 @@ nav a:hover {
 
 .logo img {
     max-height: 40px;
+    border-radius: 10px;
+    opacity: 0.8;
+
+}
+
+div .desc{
+    color: white;
+    text-align: center;
+    padding: 2px;
 }
 
 .chat-container{
+    background-color: #D9AFD9;
+    background-image: linear-gradient(57deg, #D9AFD9 0%, #97D9E1 100%);
     max-width: 1920px;
     height: 100vh;
     display: flex;
@@ -86,8 +97,8 @@ nav a:hover {
 }
 
 .sent .message-content {
-    background-color: #655fdd;
-    color: #fff;
+    background-color: #676580;
+    color:white;
     text-align: right;
 }
 
@@ -104,11 +115,12 @@ nav a:hover {
 
 
 .received{
-    background-color: #f1f0f0;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(57deg, #D9AFD9 0%, #97D9E1 100%);
 }
 
 .sent{
-    color: #fff;
+    color: #ffffff;
     text-align: right;
 }
 
@@ -127,6 +139,7 @@ position: fixed;
 
 .user-input input[type="text"] {
     width: 100%;
+    height: 50px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -170,4 +183,11 @@ position: fixed;
     max-width: 20px;
     height: auto;
     margin-right: 5px;
+}
+
+.message-timestamp {
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
 }
