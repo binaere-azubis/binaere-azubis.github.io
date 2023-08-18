@@ -27,7 +27,10 @@
     }
 
     async function send(){
-        let answer = await fetch_message(id,"hello",console.log)
+        let answer = await fetch_message(id,"hello",chunk=>{
+            console.log("chunk:",chunk);
+        })
+        console.log("full answer:",answer);
     }
 
 

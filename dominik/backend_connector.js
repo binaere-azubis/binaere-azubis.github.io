@@ -46,10 +46,10 @@ async function fetch_message(session_id,content, callback=undefined){
         console.error("error getting reader")
         console.error(e)
     })
-    .then(reader => {
+    .then(async(reader) => {
     reader = reader
 
-    reader.read().then(async function processResult(result) {
+    await reader.read().then(async function processResult(result) {
         if (result.done) {
             return;
         }
@@ -81,6 +81,8 @@ async function fetch_message(session_id,content, callback=undefined){
         console.error("err processing result");
         console.error(e);
     })
+
+    return all_text
 
 }
 
